@@ -69,3 +69,10 @@ console.log(average); // 35.5 -> oh no, side effect is forbidden !!!
 // const reduceRight = (f, init) => arr => arr.reduceRight(f, init);
 // const composeX = (...fns) => a => reduceRight((acc, f) => f(acc), a)(fns);
 // const getAdultsAgesAverage = composeX(getAverage, dropFirst, scannedSum, takeAdultAges, extractAge);
+
+import { promises as fsp} from "fs";
+
+fsp.readFile("./data/persons.json")
+  .then(JSON.parse)
+  .then(getAdultsAgesAverage)
+  .then(console.log)

@@ -1,7 +1,5 @@
 # from-javascript-to-haskell
 
-@see [advent of code][https://adventofcode.com/]
-
 ## build
 `stack build`
 
